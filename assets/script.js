@@ -1,0 +1,1 @@
+const url = `https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={f64d56583e38e61579f73e892561d4ae}`
