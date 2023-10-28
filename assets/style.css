@@ -1,0 +1,12 @@
+body{
+    margin: 70px;
+    
+}
+header h1{
+    text-align:start;
+}
+
+.main-card-container{ 
+    display: flex;
+    justify-content: space-around;
+}

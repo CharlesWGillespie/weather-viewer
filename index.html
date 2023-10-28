@@ -12,16 +12,27 @@
       <h1>Weather App</h1>
       <p>Search for Any City</p>
     </header>
-    <main>
+  <main>
       <form>
         <input id="userInput" type="text" />
         <button id="searchBtn">Search</button>
       </form>
-      <div>
-        <h1>Results</h1>
+      <div class='main-card-container'>
+        <div class="card" style="width: 600px; font-size: 30px; ">
+          <div class=" card-header">
+            City:
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Temp:</li>
+            <li class="list-group-item">Wind:</li>
+            <li class="list-group-item">Humidity:</li>
+          </ul>
+        
       </div>
+  
       
     </main>
+    
     <script src="./assets/script.js"></script>
 
   </body>
