@@ -5,8 +5,17 @@ body{
 header h1{
     text-align:start;
 }
+header p {
+    font-size: 30px;
+}
 
 .main-card-container{ 
     display: flex;
+    justify-content: space-around;
+}
+
+.five-card-container{
+    display: flex;
+    margin: 20px;
     justify-content: space-around;
 }
