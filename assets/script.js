@@ -19,13 +19,32 @@ function fetchWeatherData(city) {
     });
 }
 
+function getFutureWeather(data) {
+  const { lon } = data.cord;
+  const { lat } = data.coord;
+  const fiveDayWeather = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIKey}`
+  fetch(fiveDayWeather)
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("City not found");
+    }
+    return response.json();
+  })
+  .then((data) => {
+    showWeather(data);
+  })
+  .catch((error) => {
+    alert(error.message);
+  });
+}
+
 function showWeather(data) {
   const { name } = data;
   const { description } = data.weather[0];
   const { temp } = data.main;
   const { speed } = data.wind;
   const { humidity } = data.main;
-
+  
   
 
   // Convert temperature to Fahrenheit and m/s to Mph
@@ -43,12 +62,13 @@ function showWeather(data) {
 
 
 
-  cardHeader.textContent = `${description} in ${name} | ${currentDate}` ;
+  cardHeader.textContent = `${name} | ${description} | ${currentDate}` ;
   tempElement.textContent = `Temp: ${temp}°C |  ${tempFahrenheit.toFixed()}°F`;
   windElement.textContent = `Wind: ${speed} m/s | ${speedMPH.toFixed()}mph`;
   humidityElement.textContent = `Humidity: ${humidity}%`;
    
 }
+
 
 searchBtn.addEventListener("click", (event) => {
   event.preventDefault(); // Prevent form submission
@@ -56,7 +76,3 @@ searchBtn.addEventListener("click", (event) => {
   const city = userInput.value;
   fetchWeatherData(city);
 });
-
-function showNextFiveDayWeather(data) {
-
-}
