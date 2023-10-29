@@ -21,6 +21,7 @@ function fetchWeatherData(city) {
 
 function showWeather(data) {
   const { name } = data;
+  const { dt_txt } = data.sys; 
   const { temp } = data.main;
   const { speed } = data.wind;
   const { humidity } = data.main;
@@ -34,7 +35,7 @@ function showWeather(data) {
   const windElement = card.querySelector(".list-group-item:nth-child(2)");
   const humidityElement = card.querySelector(".list-group-item:nth-child(3)");
 
-  cardHeader.textContent = `City: ${name}`;
+  cardHeader.textContent = `City: ${name} `;
   tempElement.textContent = `Temp (C): ${temp}°C | Temp (F): ${tempFahrenheit.toFixed()}°F`;
   windElement.textContent = `Wind: ${speed} m/s`;
   humidityElement.textContent = `Humidity: ${humidity}%`;
