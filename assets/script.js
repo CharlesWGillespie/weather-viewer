@@ -30,6 +30,8 @@ function showWeather(data) {
   // Convert temperature to Fahrenheit
   const tempFahrenheit = (temp * 9) / 5 + 32;
   const speedMPH = speed * 2.23694
+  
+  const currentDate = dayjs().format('MM/DD/YYYY');
 
   const card = document.querySelector('.card');
   const cardHeader = card.querySelector('.card-header');
@@ -39,7 +41,7 @@ function showWeather(data) {
 
 
 
-  cardHeader.textContent = `City: ${name} ` ;
+  cardHeader.textContent = `City: ${name} | ${currentDate}` ;
   tempElement.textContent = `Temp: ${temp}°C |  ${tempFahrenheit.toFixed()}°F`;
   windElement.textContent = `Wind: ${speed} m/s | ${speedMPH.toFixed()}mph`;
   humidityElement.textContent = `Humidity: ${humidity}%`;
