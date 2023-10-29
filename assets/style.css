@@ -11,13 +11,12 @@ header p{
     color:azure;
 }
 
-.main-card-container{ 
+.main-card-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    margin: 20px;
 }
-
-.five-day-forcast{
-    margin: 30px;
+.five-day-forcast{ 
     display: flex;
     justify-content: space-around;
 }
