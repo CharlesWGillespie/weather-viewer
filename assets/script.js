@@ -24,6 +24,7 @@ function showWeather(data) {
   const { temp } = data.main;
   const { speed } = data.wind;
   const { humidity } = data.main;
+
   
 
   // Convert temperature to Fahrenheit
@@ -37,7 +38,8 @@ function showWeather(data) {
   const humidityElement = card.querySelector('.list-group-item:nth-child(3)');
 
 
-  cardHeader.textContent = `City: ${name}  `;
+
+  cardHeader.textContent = `City: ${name} ` ;
   tempElement.textContent = `Temp: ${temp}°C |  ${tempFahrenheit.toFixed()}°F`;
   windElement.textContent = `Wind: ${speed} m/s | ${speedMPH.toFixed()}mph`;
   humidityElement.textContent = `Humidity: ${humidity}%`;

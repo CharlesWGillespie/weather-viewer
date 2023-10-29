@@ -13,10 +13,12 @@ header h1 {
 .main-card-container {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 50px;
   font-family: "JetBrains Mono", monospace;
 }
 .five-day-forcast {
+    margin-left: 200px;
+    margin-right: 200px;
   display: flex;
   font-family: "JetBrains Mono", monospace;
   justify-content: space-around;
