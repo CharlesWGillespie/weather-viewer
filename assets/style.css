@@ -16,9 +16,19 @@ header h1 {
   margin: 50px;
   font-family: "JetBrains Mono", monospace;
 }
+
+.card {
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #5adaff 0,
+    #5468ff 100%
+  );
+  color: white;
+}
+
 .five-day-forcast {
-    margin-left: 200px;
-    margin-right: 200px;
+  margin-left: 200px;
+  margin-right: 200px;
   display: flex;
   font-family: "JetBrains Mono", monospace;
   justify-content: space-around;

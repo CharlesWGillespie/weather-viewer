@@ -21,16 +21,18 @@ function fetchWeatherData(city) {
 
 function showWeather(data) {
   const { name } = data;
+  const { description } = data.weather[0];
   const { temp } = data.main;
   const { speed } = data.wind;
   const { humidity } = data.main;
 
   
 
-  // Convert temperature to Fahrenheit
+  // Convert temperature to Fahrenheit and m/s to Mph
   const tempFahrenheit = (temp * 9) / 5 + 32;
   const speedMPH = speed * 2.23694
   
+  // Get Current Date
   const currentDate = dayjs().format('MM/DD/YYYY');
 
   const card = document.querySelector('.card');
@@ -41,7 +43,7 @@ function showWeather(data) {
 
 
 
-  cardHeader.textContent = `City: ${name} | ${currentDate}` ;
+  cardHeader.textContent = `${description} in ${name} | ${currentDate}` ;
   tempElement.textContent = `Temp: ${temp}°C |  ${tempFahrenheit.toFixed()}°F`;
   windElement.textContent = `Wind: ${speed} m/s | ${speedMPH.toFixed()}mph`;
   humidityElement.textContent = `Humidity: ${humidity}%`;
@@ -54,3 +56,7 @@ searchBtn.addEventListener("click", (event) => {
   const city = userInput.value;
   fetchWeatherData(city);
 });
+
+function showNextFiveDayWeather(data) {
+
+}
