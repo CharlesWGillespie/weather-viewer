@@ -41,7 +41,6 @@ function showWeather(data) {
   tempElement.textContent = `Temp (C): ${temp}°C | Temp (F): ${tempFahrenheit.toFixed()}°F`;
   windElement.textContent = `Wind: ${speed} m/s`;
   humidityElement.textContent = `Humidity: ${humidity}%`;
-
   
 }
 
