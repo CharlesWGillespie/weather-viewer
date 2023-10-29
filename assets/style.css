@@ -1,12 +1,14 @@
 body{
     margin: 70px;
-    
+    background-color: rgb(47, 47, 47);
 }
 header h1{
     text-align:start;
+    color:azure;
 }
 header p{
     font-size: 20px;
+    color:azure;
 }
 
 .main-card-container{ 
