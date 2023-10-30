@@ -17,6 +17,8 @@ https://charleswgillespie.github.io/weather-viewer/
  button idea - https://getcssscan.com/css-buttons-examples
 
 ## Preview Screenshots
+![Capture](https://github.com/CharlesWGillespie/weather-viewer/assets/143773137/b522d56f-37e1-4521-bcf4-e74b9286a516)
+![Capture 2](https://github.com/CharlesWGillespie/weather-viewer/assets/143773137/dd419ad7-e541-4a4c-8eef-f9605fa3ffb2)
 
 ## Features
 
