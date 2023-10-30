@@ -41,11 +41,11 @@ header h1 {
 
 
 .five-day-forcast {
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 100px;
+  margin-right: 100px;
   display: flex;
   font-family: "JetBrains Mono", monospace;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 input {
